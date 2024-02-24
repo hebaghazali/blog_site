@@ -7,12 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
 
+    <!-- Latest compiled and minified CSS -->
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+    />
+
     <!-- Optional theme -->
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous"
     />
 
     <!-- Medium Style Editor -->
@@ -40,7 +48,7 @@
       <div class="container">
         <ul class="nav navbar-nav">
           <li>
-            <a class="navbar-brand bigbrand" href="{% url 'post_list' %}"></a>
+            <a class="navbar-brand bigbrand" href="{% url 'post_list' %}">My blog</a>
           </li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="https://www.github.com">GitHub</a></li>
@@ -60,7 +68,7 @@
             <a href="{% url 'logout' %}">Logout</a>
           </li>
           <li>
-            <h2>Welcome: {{user.username}}</h2>
+            <a>Welcome: {{ user.username }}</a>
           </li>
           {% else %}
           <li>
